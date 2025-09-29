@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Light mode colors */
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #6b7280;
+    --color-background-primary: #ffffff;
+    --color-background-secondary: #f9fafb;
+    --color-border-default: #e0e0e0;
+    --color-hover-light: rgba(0, 0, 0, 0.04);
+    --color-dropdown-bg: white;
+    --color-darkCharcoal: #252E37;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --color-text-primary: #1c252e;
+    --color-text-secondary: #d1d5db;
+    --color-background-primary: #141A21;
+    --color-background-secondary: #1f2937;
+    --color-border-default: #333E47;
+    --color-hover-light: rgba(255, 255, 255, 0.1);
+    --color-dropdown-bg: rgba(28, 37, 46, 0.9);
+    --color-darkCharcoal: #252E37;
+  }
+
+  body {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+}
+
+.scrollbar {
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    transition: background 0.3s ease;
+  }
+  &::-webkit-scrollbar {
+    width: 7px;
+  }
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #c1c1c1;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+      background: #a8a8a8 !important;
+    }
+  }
+}
+
+.MuiInputBase-input:focus {
+    --tw-ring-shadow: none !important;
+    --tw-ring-color: black !important;
+    border-color: black !important;
+    outline: black !important;
+}
+
+.css-19yqv4b {
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+}
+
+.right-sidebar {
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    backdrop-filter: blur(20px);
+}
+
+.css-1cxb3xt-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    backdrop-filter: blur(20px);
+}
+
+.css-16ooe49-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    backdrop-filter: blur(20px);
+}
+
+.css-1j70rh4-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+    background-color: var(--color-text-primary) !important;
+    color: black !important;
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    backdrop-filter: blur(20px);
+}
+
+.dark {
+    .css-1j70rh4-MuiPaper-root-MuiPopover-paper-MuiMenu-paper {
+        background-color: var(--color-text-primary) !important;
+        color: #ffffff !important;
+    }
+}
+
+
+.custom-select-dropdown {
+    background-image: url('../../public/assets/background.svg') !important;
+    background-size: 50%, 50%;
+    background-repeat: no-repeat;
+    background-position: top right, left bottom;
+    backdrop-filter: blur(20px);
+}
+
+/* MUI TextField */
+.MuiInputBase-root {
+    color: black !important;
+}
+.MuiInputBase-input {
+    color: black !important;
+}
+.MuiSelect-select {
+    color: black !important;
+}
+
+/* Label styles - initially gray, black when focused/shrunk */
+.MuiInputLabel-root {
+    color: #919191 !important;
+}
+.MuiInputLabel-root.MuiInputLabel-shrink {
+    color: black !important;
+}
+.MuiInputLabel-root.Mui-focused {
+    color: black !important;
+}
+
+/* Placeholder text color */
+.MuiInputBase-input::placeholder {
+    color: #919191 !important;
+    opacity: 1 !important;
+}
+
+.MuiInputBase-root, .MuiSelect-select, .MuiInputLabel-root {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 15px !important;
+    line-height: 24px !important;
+    font-weight: 400 !important;
+}
+
+/* Table Styles */
+.table-container {
+    box-shadow: none !important;
+    z-index: 1 !important;
+    border-radius: 0px !important;
+}
+
+.table-header-cell {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: #637381 !important;
+    font-weight: 600 !important;
+    background-color: #F4F6F8 !important;
+}
+
+.table-body-cell {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 22px !important;
+    color: #1c252e !important;
+    font-weight: 400 !important;
+    border-bottom: 1px rgba(145,158,171,0.2) solid !important;
+    border-style: dashed !important;
+}
+
+.table-sort-label {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
+    color: #1c252e !important;
+    font-weight: 600 !important;
+}
+
+.table-sticky-cell {
+    position: sticky !important;
+    z-index: 10 !important;
+    background-color: white !important;
+}
+
+.table-sticky-header-cell {
+    position: sticky !important;
+    z-index: 20 !important;
+    background-color: #f4f6f8 !important;
+}
+
+.dark {
+    .table-container {
+        background-color: var(--color-text-primary) !important;
+    }
+}
+
+.dark {
+    .table-header-cell {
+        background-color: #28323D !important;
+        color: #919eab !important;
+    }
+}
+
+.dark {
+    .table-body-cell {
+        color: #ffffff !important;
+    }
+}
+.dark {
+    .table-sort-label {
+        color: #ffffff !important;
+    }
+}
+.dark {
+    .table-sticky-cell {
+        background-color: #374151 !important;
+    }
+}
+
+.dark {
+    .table-sticky-header-cell {
+        background-color: #374151 !important;
+    }
+}
+
+.dark {
+    .table-row-hover:hover {
+        background-color: var(--color-darkCharcoal) !important;
+    }
+}
+
+.dark {
+    .table-pagination {
+        background-color: var(--color-text-primary) !important;
+    }
+}
+
+/* Override Material-UI default z-index values to be lower than TopBar */
+.MuiTableHead-root {
+    z-index: 10 !important;
+}
+
+.MuiTableCell-stickyHeader {
+    z-index: 10 !important;
+}
+
+.MuiTextField-root {
+    z-index: 1 !important;
+}
+
+.MuiOutlinedInput-root {
+    z-index: 1 !important;
+}
+
+.MuiPaper-root {
+    z-index: 1 !important;
+}
+
+.table-row-hover:hover .table-sticky-cell {
+    background-color: #f9fafb !important;
+}
+
+/* Table Pagination Styles */
+.table-pagination {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+}
+
+.table-pagination .MuiTablePagination-selectLabel,
+.table-pagination .MuiTablePagination-displayedRows {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+    color: #637381 !important;
+    font-weight: 500 !important;
+}
+
+.table-pagination .MuiTablePagination-select {
+    font-family: 'Public Sans', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif !important;
+    font-size: 14px !important;
+    color: #637381 !important;
+    font-weight: 500 !important;
+}
+
+.table-pagination .MuiIconButton-root {
+    color: #637381 !important;
+}
+
+.table-pagination .MuiIconButton-root:hover {
+    background-color: #f4f6f8 !important;
+}
