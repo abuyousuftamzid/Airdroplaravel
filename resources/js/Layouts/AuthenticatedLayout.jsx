@@ -67,6 +67,7 @@ export default function AuthenticatedLayout({ header, children, searchQuery }) {
                     transition: 'all 200ms linear',
                     zIndex: 10,
                 }}
+                className="main-scrollbar"
             >
                 {/* Page header */}
                 {header && (

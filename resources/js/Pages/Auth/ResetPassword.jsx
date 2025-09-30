@@ -74,7 +74,7 @@ export default function ResetPassword({ token, user_email }) {
                         autoComplete="new-password"
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
-                        )
+                        }
                     />
 
                     <InputError

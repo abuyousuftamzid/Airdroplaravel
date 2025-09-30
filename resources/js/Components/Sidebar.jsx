@@ -47,7 +47,7 @@ const navigation = [
             { name: 'Create Package', href: '/admin/packages/create' },
             { name: 'Package Reporting', href: '/packages/reporting' },
             { name: 'Create Package Label', href: '/packages/label/create' },
-            { name: 'Update Package Status', href: '/packages/status/update' },
+            { name: 'Update Package Status', href: '/admin/packages/status/update' },
             { name: 'Delete Packages', href: '/packages/delete' },
         ]
     },

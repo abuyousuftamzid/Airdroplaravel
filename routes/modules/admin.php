@@ -208,10 +208,18 @@ Route::group([
             Route::post('/get-data', [PackageController::class, 'getData'])->name('get-data');
             Route::get('/export-csv', [PackageController::class, 'exportCsv'])->name('exportCsv');
             Route::post('/export-csv', [PackageController::class, 'exportCsv'])->name('exportCsv.post');
+
+            // Package Status Update Routes (accessible without master password)
+            Route::get('/status/update', [PackageController::class, 'updateStatus'])->name('update-status');
         });
     });
 
-    }); // End of master.password middleware group
+}); // End of master.password middleware group
+
+    // Routes without master password protection
+    // Route::prefix('packages')->name('packages.')->group(function () {
+    //     Route::get('/update-status', [PackageController::class, 'updateStatus'])->name('update-status');
+    // });
 
     // Additional admin routes can be added here
     // Route::resource('/products', ProductController::class);

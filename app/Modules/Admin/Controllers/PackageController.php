@@ -394,6 +394,14 @@ class PackageController extends Controller
     }
 
     /**
+     * Show package status update page
+     */
+    public function updateStatus()
+    {
+        return Inertia::render('Admin/Package/UpdatePackageStatus');
+    }
+
+    /**
      * List all packages with filtering and pagination
      */
     public function index(Request $request)

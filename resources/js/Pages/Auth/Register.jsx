@@ -92,7 +92,7 @@ export default function Register() {
                         autoComplete="new-password"
                         onChange={(e) =>
                             setData('password_confirmation', e.target.value)
-                        )
+                        }
                         required
                     />
 

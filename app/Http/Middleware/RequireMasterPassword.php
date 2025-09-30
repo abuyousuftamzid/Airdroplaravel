@@ -21,8 +21,9 @@ class RequireMasterPassword
             return redirect()->route('login');
         }
 
-        // Allow access to admin dashboard without master password
-        if ($request->routeIs('admin.dashboard') || $request->is('admin/dashboard')) {
+        // Allow access to admin dashboard and package update status without master password
+        if ($request->routeIs('admin.dashboard') || $request->is('admin/dashboard') ||
+            $request->routeIs('admin.packages.update-status') || $request->is('admin/packages/update-status')) {
             return $next($request);
         }
 

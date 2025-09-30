@@ -57,6 +57,41 @@
   }
 }
 
+/* Custom scrollbar for main content */
+.main-scrollbar::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+.main-scrollbar::-webkit-scrollbar-track {
+  background: #fafcfb;
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #8a8a8a;
+  border-radius: 3px;
+  transition: background-color 0.3s ease;
+}
+
+.main-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #636363;
+}
+
+/* Dark mode scrollbar */
+.dark .main-scrollbar::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+.dark .main-scrollbar::-webkit-scrollbar-thumb {
+    background-color: #9f9f9f;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
+}
+
+.dark .main-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: #D1D1D1;
+}
+
 .MuiInputBase-input:focus {
     --tw-ring-shadow: none !important;
     --tw-ring-color: black !important;
@@ -163,6 +198,38 @@
     box-shadow: none !important;
     z-index: 1 !important;
     border-radius: 0px !important;
+}
+
+/* Scrollbar styles for table container */
+.table-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+    background: #F6F7F8;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+    background: #CED3D9;
+    border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+    background: #4A4F56 !important;
+}
+
+.dark .table-container::-webkit-scrollbar-track {
+    background: #222B34;
+}
+
+.dark .table-container::-webkit-scrollbar-thumb {
+    /* background: rgba(73, 86, 97, 0.5); */
+    background: #63738166 !important;
+}
+
+.dark .table-container::-webkit-scrollbar-thumb:hover {
+    background: #C6CCD1 !important;
 }
 
 .table-header-cell {
@@ -302,4 +369,44 @@
 
 .table-pagination .MuiIconButton-root:hover {
     background-color: #f4f6f8 !important;
+}
+
+.dark {
+    .table-pagination .MuiIconButton-root {
+        color: #ffffff !important;
+    }
+}
+
+.dark {
+    .table-pagination .MuiIconButton-root:hover {
+        background-color: #374151 !important;
+    }
+}
+
+.dark {
+    .table-pagination .MuiTablePagination-selectLabel, .table-pagination .MuiTablePagination-displayedRows {
+        color: #ffffff !important;
+    }
+}
+
+.dark {
+    .table-pagination .MuiTablePagination-select {
+        color: #ffffff !important;
+    }
+}
+
+.table-pagination .MuiSvgIcon-root {
+    color: #637381 !important;
+}
+
+.dark {
+    .table-pagination .MuiSvgIcon-root {
+        color: #ffffff !important;
+    }
+}
+
+.dark {
+    .table-pagination .MuiTablePagination-actions {
+        color: #ffffff !important;
+    }
 }
